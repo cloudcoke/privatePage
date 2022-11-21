@@ -34,7 +34,7 @@ const modifyHandler = (e) => {
 
     const boardsStr = JSON.stringify(boardsObj);
     localStorage.setItem("boards", boardsStr);
-    location.href = "/localStorageBoard/board/view.html" + idx;
+    location.href = "/privatePage/localStorageBoard/board/view.html" + idx;
   } catch (e) {
     alert(e.message);
     console.error(e);

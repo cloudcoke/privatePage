@@ -30,7 +30,7 @@ for (let i = 0; i < viewFrm.length; i++) {
 const modifyBtn = document.querySelector("#modify");
 
 const modifyBtnHandler = (e) => {
-  location = "/board/modify.html" + idx;
+  location = "/localStorageBoard/board/modify.html" + idx;
 };
 
 modifyBtn.addEventListener("click", modifyBtnHandler);
@@ -46,7 +46,7 @@ const deleteBtnHandler = (e) => {
 
   const setBoardsStr = JSON.stringify(boardsObj);
   localStorage.setItem("boards", setBoardsStr);
-  location.href = "/board/list.html";
+  location.href = "/localStorageBoard/board/list.html";
 };
 
 deleteBtn.addEventListener("click", deleteBtnHandler);

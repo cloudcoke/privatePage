@@ -62,7 +62,7 @@ const submitHandler = (e) => {
     // boards 저장
     const boardsStr = JSON.stringify(boardsObj);
     localStorage.setItem("boards", boardsStr);
-    location.href = "/board/view.html?index=" + index;
+    location.href = "/localStorageBoard/board/view.html?index=" + index;
   } catch (e) {
     // 예외 발생시 메시지 출력
     alert(e.message);

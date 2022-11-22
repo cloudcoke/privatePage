@@ -8,7 +8,7 @@ class Board {
     this.Writer = writerStr;
     this.Content = contentStr;
     this.date = recordDate();
-    this.views = 0;
+    this.views = -1;
     this.refresh = true;
   }
 

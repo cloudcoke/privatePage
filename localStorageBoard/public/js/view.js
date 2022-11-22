@@ -6,7 +6,7 @@ const index = idx.split("=")[1];
 const board = boardsObj[index];
 
 const beforeUrl = document.referrer;
-
+console.log(beforeUrl);
 // 조회수
 if (!board.refresh) {
   board.views++;

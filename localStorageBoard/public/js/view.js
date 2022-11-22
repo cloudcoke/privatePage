@@ -8,15 +8,18 @@ const board = boardsObj[index];
 const beforeUrl = document.referrer;
 
 // 조회수
-const viewCount = (beforeUrl) => {
-  if (beforeUrl.split("/").pop() === "list.html") {
+if (!board.refresh) {
+  board.views++;
+  board.refresh = true;
+  const viewCountStr = JSON.stringify(boardsObj);
+  localStorage.setItem("boards", viewCountStr);
+} else {
+  if (beforeUrl === " ") {
     board.views++;
     const viewCountStr = JSON.stringify(boardsObj);
     localStorage.setItem("boards", viewCountStr);
   }
-};
-
-viewCount(beforeUrl);
+}
 
 // 데이터 출력
 const viewFrm = document.querySelectorAll("#viewFrm > div");

@@ -9,7 +9,7 @@ class Board {
     this.Content = contentStr;
     this.date = recordDate();
     this.views = 0;
-    this.refresh = false;
+    this.refresh = true;
   }
 
   // 값 설정시 빈 값 체크
